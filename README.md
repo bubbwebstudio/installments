@@ -36,11 +36,11 @@ $instalment->setAmount(200);
 // Required.
 $instalment->setTaxes([
     // Instalment 1: no tax, no discount.
-    ['installment' => 1, 'price_discount' => 0, 'tax' => 0],
+    ['installment' => 1, 'percent_discount' => 0, 'tax' => 0],
     // Instalment 2: no tax, no discount.
-    ['installment' => 2, 'price_discount' => 0, 'tax' => 0],
+    ['installment' => 2, 'percent_discount' => 0, 'tax' => 0],
     // Instalment 3: no tax, no discount.
-    ['installment' => 3, 'price_discount' => 0, 'tax' => 0],
+    ['installment' => 3, 'percent_discount' => 0, 'tax' => 0],
 ]);
 exit(var_dump($instalment->get()));
 ```
