@@ -1,7 +1,7 @@
 
-# Instalment
+# installment
 
-Instalment is an official library created by developers of the [BUBB.STORE](http://bubbstore.com.br) platform that handles the calculation of instalments.
+installment is an official library created by developers of the [BUBB.STORE](http://bubbstore.com.br) platform that handles the calculation of installments.
 
 
 #### **System Requirements**
@@ -24,25 +24,25 @@ In your `composer.json`, include the following:
 #### **Usage**
 
 ##### Example #1
-To calculate possible instalments for an order, in this case:
+To calculate possible installments for an order, in this case:
 
 `Order total price: 200 BRL`, 
-`Order max. instalments: 3`
+`Order max. installments: 3`
 
 ```php
-$instalment = new Installment;
+$installment = new Installment;
 // Required.
-$instalment->setAmount(200);
+$installment->setAmount(200);
 // Required.
-$instalment->setTaxes([
-    // Instalment 1: no tax, no discount.
+$installment->setTaxes([
+    // installment 1: no tax, no discount.
     ['installment' => 1, 'percent_discount' => 0, 'tax' => 0],
-    // Instalment 2: no tax, no discount.
+    // installment 2: no tax, no discount.
     ['installment' => 2, 'percent_discount' => 0, 'tax' => 0],
-    // Instalment 3: no tax, no discount.
+    // installment 3: no tax, no discount.
     ['installment' => 3, 'percent_discount' => 0, 'tax' => 0],
 ]);
-exit(var_dump($instalment->get()));
+exit(var_dump($installment->get()));
 ```
 
 Its output would be:
@@ -114,19 +114,19 @@ Its output would be:
 
 ##### Example #2
 
-To calculate possible instalments for an order, in this case:
+To calculate possible installments for an order, in this case:
 
 `Order total price: 677 BRL`, 
-`Order max. instalments: 12 (up to 6, without taxes)`
-`Order min. instalment value: 20 BRL`
+`Order max. installments: 12 (up to 6, without taxes)`
+`Order min. installment value: 20 BRL`
 
 ```php
-$instalment = new Installment;
+$installment = new Installment;
 // Required.
-$instalment->setAmount(200);
+$installment->setAmount(200);
 // Required.
-$instalment->setTaxes([
-    // Instalment 1: no tax, 10% discount.
+$installment->setTaxes([
+    // installment 1: no tax, 10% discount.
     ['installment' => 1, 'percent_discount' => 10, 'tax' => 0],
     // Installment 2: no tax, no discount.
     ['installment' => 2, 'percent_discount' => 0, 'tax' => 0],
@@ -151,16 +151,16 @@ $instalment->setTaxes([
     // Installment 12: tax 1.99% month, no discount.
     ['installment' => 12, 'percent_discount' => 0, 'tax' => 1.99]
 ]);
-$instalment->setMinInstallmentValue(20);
-$instalment->setMaxInstallmentsWithoutTax(6);
-exit(var_dump($instalment->get()));
+$installment->setMinInstallmentValue(20);
+$installment->setMaxInstallmentsWithoutTax(6);
+exit(var_dump($installment->get()));
 ```
 
 Its output would be:
 
 ```php
 {
-   // Max instalments is 11 because the library popped the last instalment for it had a value lower than the min. instalment value (20 BRL).
+   // Max installments is 11 because the library popped the last installment for it had a value lower than the min. installment value (20 BRL).
    "max_installment":11,
    "max_installment_value":20.06,
    "amount":220.71,
@@ -170,7 +170,7 @@ Its output would be:
    "text_discount":"R$ 180,00 \u00e0 vista no cart\u00e3o",
    "installments":[  
       {
-         // Discounted amount for the first instalment.  
+         // Discounted amount for the first installment.  
          "amount":180,
          "amount_formated":"R$ 180,00",
          "base_value":200,
