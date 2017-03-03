@@ -1,0 +1,19 @@
+{
+	"name": "lucascolette/installments",
+	"description": "Installments helper",
+	"keywords": [
+		"installments",
+		"pricing"
+	],
+	"license": "MIT",
+	"authors": [
+	{
+		"name": "Lucas Colette",
+		"email": "lucas@bubb.com.br"
+	}
+	],
+	"require": {
+		"php": ">=5.4.0"
+	},
+	"minimum-stability": "dev"
+}
