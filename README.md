@@ -16,7 +16,7 @@ In your `composer.json`, include the following:
 ```json
 {
     "require": {
-        "lucascolette/installments": "master"
+        "bubb/installments": "master"
     }
 }
 ```
