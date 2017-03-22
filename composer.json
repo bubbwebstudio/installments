@@ -15,5 +15,8 @@
 	"require": {
 		"php": ">=5.4.0"
 	},
+	"autoload": {
+	  "psr-0": {"BUBB\\Installments": "src"}
+	},
 	"minimum-stability": "dev"
 }
