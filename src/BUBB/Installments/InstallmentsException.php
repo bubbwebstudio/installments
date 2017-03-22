@@ -1,5 +1,7 @@
 <?php
 
+namespace BUBB\Installments;
+
 use Exception;
 
 class InstallmentsException extends Exception

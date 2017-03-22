@@ -1,6 +1,8 @@
 <?php
 
-use InstallmentsException;
+namespace BUBB\Installments;
+
+use BUBB\Installments\InstallmentsException;
 
 class Installments
 {
